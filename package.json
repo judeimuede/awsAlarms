@@ -9,8 +9,8 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "deploy": "cdk deploy awsAlarms",
-    "destroy": "cdk destroy awsAlarms"
+    "deploy": "cdk deploy AwsAlarmsStack",
+    "destroy": "cdk destroy AwsAlarmsStack"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.85.0",
