@@ -1,1 +1,1 @@
-The project creates an AWS CDK for CloudWatch Alarms and synthesizes Cloudformation template.
+This project creates an AWS CDK for CloudWatch Alarms and synthesizes Cloudformation template.
