@@ -12,24 +12,22 @@ export class AwsAlarmsStack extends cdk.Stack {
       metricName: 'CPUUtilization',
       statistic: 'Average',
       period: cdk.Duration.minutes(5),
-      dimensions: [
-        {
-        name: 'Instance',
-        value: 'i-0e7e9ac3b9ba678d2'
-      },
-    ],
+     // dimensions: [
+       // {
+        //name: 'InstanceId',
+        //value: 'i-0e7e9ac3b9ba678d2'
+      //},
+    //],
     });
 
     // Alarm class
     const alarm = new cloudwatch.Alarm(this, 'Alarm', {
       metric: metric,
-      threshold: 100,
+      threshold: 70,
       evaluationPeriods: 3,
       datapointsToAlarm: 2,
       actionsEnabled: true,
-      alarmDescription: 'Alarm when CPU Utilization exceeds 100%',
-    
-      
+      alarmDescription: 'Alarm when CPU Utilization exceeds 70%',
 
     });
   }
